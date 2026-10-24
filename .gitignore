@@ -5,3 +5,6 @@ node_modules/
 *.log
 .claude/.simplify-ignore-cache/
 .claude/sdd-cache/
+
+# Router usage log (local only)
+router-usage.jsonl
