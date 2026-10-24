@@ -24,3 +24,16 @@ Fix: `cache_file_for` in `hooks/sdd-cache-test.sh` now uses the same shasum-then
 Next: wire the suite into CI (see blockers).
 
 ---
+## 3 (2026-10-24) — hook tests run in CI
+
+Pre-flight: HUMAN, blocklist, themes, and soft-failure files are still absent. The cycle-2 claim could still be wrong: the test now needs `python3`, `jq`, and `curl`, and it does not report which one is missing. I did not fix that here. It is a diagnostics gap, not a silent failure.
+
+Finding: no CI job ran any hook test. The two existing tests (`simplify-ignore-test.sh`, `session-start-test.sh`) both pass locally, and `sdd-cache-test.sh` passes too.
+
+Fix: added a `test-hooks` job to `.github/workflows/test-plugin-install.yml` that runs all three. The YAML parses, and the three commands pass in sequence locally. Hooks depend on no other job.
+
+Recursive-learn (cycle 3, prompt 1): the test passed on a machine where it should fail only because the test and the hooks disagreed about the hash tool. Nothing in the suite exercised the missing-tool path, so the bug could only surface on a host like that. A test that runs the hook with a stripped PATH would have caught it.
+
+Prediction: the new job passes on its first GitHub run (recorded in `memory/predictions.jsonl`).
+
+---

@@ -20,6 +20,18 @@ jobs:
       - name: Validate all skills
         run: node scripts/validate-skills.js
 
+  test-hooks:
+    name: Test session hooks
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Run hook tests
+        run: |
+          bash hooks/simplify-ignore-test.sh
+          bash hooks/session-start-test.sh
+          bash hooks/sdd-cache-test.sh
+
   validate:
     name: Validate plugin structure
     needs: validate-skills
