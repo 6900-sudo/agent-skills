@@ -8,6 +8,13 @@
 set -euo pipefail
 
 HOOKS_DIR="$(cd "$(dirname "$0")" && pwd)"
+
+# The hooks skip silently when these are missing; the test needs them, so
+# name the missing one instead of failing somewhere downstream.
+for tool in jq curl python3; do
+  command -v "$tool" >/dev/null 2>&1 || { printf 'sdd-cache-test: missing required tool: %s\n' "$tool" >&2; exit 1; }
+done
+
 PASS=0 FAIL=0
 TMPDIR=$(mktemp -d)
 SERVER_PID=""
