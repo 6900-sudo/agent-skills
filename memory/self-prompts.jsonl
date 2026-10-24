@@ -1,3 +1,0 @@
-{"id": 1, "prompt": "Which test would have caught the shasum fallback bug before it was pushed, and why did no test in the suite touch the missing-tool path?"}
-{"id": 2, "prompt": "If the hooks' cache key ever changed, which two files would drift apart silently, and what single shared function would prevent that?"}
-{"id": 3, "prompt": "What does a passing test prove about the hook, and what does it leave unproven about Claude Code's real WebFetch payload shape?"}
