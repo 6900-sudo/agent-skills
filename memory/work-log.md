@@ -37,3 +37,14 @@ Recursive-learn (cycle 3, prompt 1): the test passed on a machine where it shoul
 Prediction: the new job passes on its first GitHub run (recorded in `memory/predictions.jsonl`).
 
 ---
+## 4 (2026-10-24) — CI is not running for this repo
+
+Pre-flight: the cycle-3 claim could be wrong in one specific way: I said the `test-hooks` job "depends on no other job", but that is only true if it runs at all. It does not: zero workflows are registered for the repo. No soft-failure, HUMAN, blocklist, or themes files exist.
+
+Finding: `list_workflows` returns none and there are zero workflow runs on any branch, although the workflow file is present at head `4e8112f`. The `test-hooks` job I added cannot run, so the prediction logged in cycle 3 is untestable.
+
+Fix: the cause is a repository setting, which the sandbox cannot change. I logged the finding and the recommended check in `memory/blockers.md`. I also recorded the prediction as wrong, with the lesson, in `memory/predictions.jsonl`. No code changed this cycle.
+
+Next: next cycle, re-check whether the workflow registers once Actions is enabled.
+
+---
