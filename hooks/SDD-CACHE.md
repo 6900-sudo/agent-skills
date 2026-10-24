@@ -80,6 +80,14 @@ The skill itself is unchanged. It continues to follow `DETECT → FETCH → IMPL
 
 ## Local testing
 
+### 0. Run the automated suite
+
+```bash
+bash hooks/sdd-cache-test.sh
+```
+
+It starts a local origin on `127.0.0.1` and needs no network. It requires `jq`, `curl`, and `python3`, and it names any that are missing. Expect `10 passed, 0 failed`.
+
 ### 1. Smoke test the scripts directly
 
 ```bash
