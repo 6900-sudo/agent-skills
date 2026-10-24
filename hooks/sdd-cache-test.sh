@@ -82,10 +82,15 @@ assert() {
 pre_input()  { jq -nc --arg u "$1" '{tool_input: {url: $u, prompt: "p"}}'; }
 post_input() { jq -nc --arg u "$1" --arg c "$2" '{tool_input: {url: $u, prompt: "p"}, tool_response: {result: $c}}'; }
 
-# Must match the hooks: sha256(URL), first 32 hex chars.
+# Must match the hooks: sha256(URL), first 32 hex chars. The hooks fall back
+# to sha256sum when shasum is missing, so the test does the same.
 cache_file_for() {
   local key
-  key=$(printf '%s' "$1" | shasum -a 256 | cut -c1-32)
+  if command -v shasum >/dev/null 2>&1; then
+    key=$(printf '%s' "$1" | shasum -a 256 | cut -c1-32)
+  else
+    key=$(printf '%s' "$1" | sha256sum | cut -c1-32)
+  fi
   printf '%s/.claude/sdd-cache/%s.json' "$CLAUDE_PROJECT_DIR" "$key"
 }
 

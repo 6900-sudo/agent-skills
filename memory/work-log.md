@@ -13,3 +13,14 @@ Counter-action: the test could pass without exercising the revalidation path. To
 Next: wire `hooks/sdd-cache-test.sh` into CI, which is not done yet. Also decide whether `memory/` belongs in this repo.
 
 ---
+## 2 (2026-10-24) — sdd-cache test works without shasum
+
+Pre-flight: no HUMAN, blocklist, themes, or soft-failure files exist. The cycle-1 claim could be wrong: the test derived cache keys with `shasum` directly, but the hooks fall back to `sha256sum`.
+
+Finding: with `shasum` removed from PATH, the suite reported 4 failures, although the hooks still work there. The test was failing on a missing tool, not on hook behavior.
+
+Fix: `cache_file_for` in `hooks/sdd-cache-test.sh` now uses the same shasum-then-sha256sum fallback as the hooks. The suite passes 10/10 with and without `shasum`. The mutation check still reports failures.
+
+Next: wire the suite into CI (see blockers).
+
+---
