@@ -1,0 +1,2 @@
+- [ ] [2026-10-24] Should `memory/` (work-log, blockers, self-prompts) live in this repo or outside it? Recommendation: keep it out of the shared repo and in a local, untracked directory, since the loop writes to it every 2 minutes. Until you decide, it stays committed on the feature branch only.
+- [ ] [2026-10-24] Wire `hooks/sdd-cache-test.sh` into CI? The repo has a `.github/workflows` directory. Recommendation: yes, add a job that runs it on hook changes, since it needs only bash, jq, curl, python3, and shasum.
