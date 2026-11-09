@@ -296,6 +296,15 @@ function useToggleTask() {
 
 For detailed accessibility requirements and testing tools, see `references/accessibility-checklist.md`.
 
+## Process
+
+1. **Set up the file structure first.** Colocate the component, its tests, and its types (Component Architecture).
+2. **Build on the design system** before adding custom styles (Design System Adherence).
+3. **Decide who owns each piece of state** before wiring up interactions (State Management).
+4. **Check accessibility** against WCAG 2.1 AA (Accessibility).
+5. **Verify responsive behavior** at both mobile and desktop widths (Responsive Design).
+6. **Confirm loading and transition states** before calling the UI done (Loading and Transitions).
+
 ## Common Rationalizations
 
 | Rationalization | Reality |

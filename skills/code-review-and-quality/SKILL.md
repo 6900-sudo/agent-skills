@@ -115,7 +115,7 @@ Every change needs a description that stands alone in version control history.
 
 **Anti-patterns:** "Fix bug," "Fix build," "Add patch," "Moving code from A to B," "Phase 1," "Add convenience functions."
 
-## Review Process
+## Process
 
 ### Step 1: Understand the Context
 

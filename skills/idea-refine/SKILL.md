@@ -5,7 +5,15 @@ description: Refines raw ideas into sharp, actionable concepts through structure
 
 # Idea Refine
 
+## Overview
+
 Refines raw ideas into sharp, actionable concepts worth building through structured divergent and convergent thinking.
+
+## When to Use
+
+- The idea is still vague and needs sharpening
+- You want to stress-test assumptions before committing to a plan
+- You want more options explored before converging on one
 
 ## How It Works
 
@@ -35,6 +43,10 @@ The final output is a markdown one-pager saved to `docs/ideas/[idea-name].md` (a
 - Key Assumptions
 - MVP Scope
 - Not Doing list
+
+## Process
+
+Three phases: Understand & Expand (divergent), Evaluate & Converge, then Sharpen & Ship (a one-page artifact). The step-by-step instructions are under Detailed Instructions.
 
 ## Detailed Instructions
 
@@ -154,6 +166,15 @@ Ask the user if they'd like to save this to `docs/ideas/[idea-name].md` (or a lo
 Direct, thoughtful, slightly provocative. You're a sharp thinking partner, not a facilitator reading from a script. Channel the energy of "that's interesting, but what if..." -- always pushing one step further without being exhausting.
 
 Read `examples.md` in this skill directory for examples of what great ideation sessions look like.
+
+## Common Rationalizations
+
+| Rationalization | Reality |
+|---|---|
+| "The idea is obvious, skip the questions" | The "who is this for" question decides everything after it. Skipping it is the most common way ideation fails. |
+| "More variations means better coverage" | 5-8 considered variations beat 20 shallow ones. |
+| "Pushing back will discourage them" | A yes-machine wastes the session. Say what's weak, kindly and specifically. |
+| "We'll find the assumptions while building" | Untested assumptions are the main way good ideas die. Surface them before committing. |
 
 ## Red Flags
 

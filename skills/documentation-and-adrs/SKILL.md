@@ -246,6 +246,14 @@ Special consideration for AI agent context:
 - **ADRs** — Help agents understand why past decisions were made (prevents re-deciding)
 - **Inline gotchas** — Prevent agents from falling into known traps
 
+## Process
+
+1. **Decide whether it's worth writing down.** Check the "When to Write an ADR" list and the "When NOT to use" guidance.
+2. **Write the ADR** with Status, Date, Context, Decision, Alternatives Considered, and Consequences, stored in `docs/decisions/` with sequential numbers.
+3. **Update the public docs** (API docs, README) whenever behavior a user or consumer sees changes.
+4. **Update the changelog** for each user-facing change.
+5. **Keep agent-facing context current.** Update the "Documentation for Agents" material when the project's conventions change.
+
 ## Common Rationalizations
 
 | Rationalization | Reality |

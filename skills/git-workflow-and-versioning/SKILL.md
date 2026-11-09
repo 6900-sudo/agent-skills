@@ -267,6 +267,15 @@ git blame src/services/task.ts
 git log --grep="validation" --oneline
 ```
 
+## Process
+
+1. **Branch from a current `main`** and keep the branch short-lived (Trunk-Based Development).
+2. **Implement one slice at a time**, then test and verify it.
+3. **Commit each working increment** as a save point, with one logical change per commit (Commit Early, Atomic Commits).
+4. **Run pre-commit hygiene** before each commit: no stray files, no secrets (Pre-Commit Hygiene).
+5. **Write a change summary** that says what changed and why.
+6. **Merge back promptly** so the branch doesn't diverge.
+
 ## Common Rationalizations
 
 | Rationalization | Reality |

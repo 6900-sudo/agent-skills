@@ -17,7 +17,7 @@ Ship with confidence. The goal is not just to deploy — it's to deploy safely, 
 - Opening a beta or early access program
 - Any deployment that carries risk (all of them)
 
-## The Pre-Launch Checklist
+## Process: The Pre-Launch Checklist
 
 ### Code Quality
 

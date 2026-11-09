@@ -9,6 +9,12 @@ description: Discovers and invokes agent skills. Use when starting a session or 
 
 Agent Skills is a collection of engineering workflow skills organized by development phase. Each skill encodes a specific process that senior engineers follow. This meta-skill helps you discover and apply the right skill for your current task.
 
+## When to Use
+
+- At the start of any session
+- Whenever you need to pick the skill that applies to the current task
+- When a task spans more than one development phase
+
 ## Skill Discovery
 
 When a task arrives, identify the development phase and apply the corresponding skill:
@@ -178,3 +184,33 @@ Not every task needs every skill. A bug fix might only need: `debugging-and-erro
 | Ship | ci-cd-and-automation | Automated quality gates on every change |
 | Ship | documentation-and-adrs | Document the why, not just the what |
 | Ship | shipping-and-launch | Pre-launch checklist, monitoring, rollback plan |
+
+## Process
+
+1. **Identify the phase** of the task using Skill Discovery.
+2. **Load that skill** and follow its steps in order. Skills are workflows, not suggestions (Skill Rules).
+3. **Chain skills for multi-phase work** using the Lifecycle Sequence. Skip the phases the task doesn't need.
+4. **Verify before reporting done.** Apply Core Operating Behavior 6 and the skill's own Verification section.
+
+## Common Rationalizations
+
+| Rationalization | Reality |
+|---|---|
+| "This task is too small for a skill" | Pick the smallest skill that covers its phase (see Lifecycle Sequence and Quick Reference). Small tasks still need the phase's checks. |
+| "I already know this process" | Skills encode the steps that prevent common mistakes. Loading one takes less time than repairing the mistake it prevents. |
+| "It looks right, so it's verified" | "Seems right" is never sufficient. This is Failure Mode 10. |
+
+## Red Flags
+
+- Starting implementation without checking whether a skill applies
+- Following a skill's steps out of order or skipping its verification
+- Naming a phase from the Quick Reference without loading the skill for it
+- Running a multi-phase task with no lifecycle order
+- Reporting completion with no evidence (test output, build output, runtime data)
+
+## Verification
+
+- [ ] The task's phase was identified from Skill Discovery
+- [ ] The applicable skill was loaded and followed in order
+- [ ] Assumptions were surfaced before non-trivial implementation (Core Operating Behavior 1)
+- [ ] Completion is backed by evidence, not by appearance

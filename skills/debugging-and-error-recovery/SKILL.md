@@ -33,7 +33,7 @@ When anything unexpected happens:
 
 **Don't push past a failing test or broken build to work on the next feature.** Errors compound. A bug in Step 3 that goes unfixed makes Steps 4-10 wrong.
 
-## The Triage Checklist
+## Process: The Triage Checklist
 
 Work through these steps in order. Do not skip steps.
 

@@ -261,6 +261,14 @@ This catches wrong directions before you've built on them. It's a 30-second inve
 | Implicit knowledge | Agent doesn't know project-specific rules | Write it down in rules files — if it's not written, it doesn't exist |
 | Silent confusion | Agent guesses when it should ask | Surface ambiguity explicitly using the confusion management patterns above |
 
+## Process
+
+1. **Load the rules file first.** Project-wide conventions go in every session (Level 1).
+2. **Load the spec or architecture docs** for the feature you're working on (Level 2).
+3. **Load only the source files the current task touches** (Level 3).
+4. **Feed back error output and test results** as each iteration produces them (Level 4).
+5. **Re-check the context when output drifts.** Wrong patterns or ignored conventions mean the context needs fixing, not just another attempt.
+
 ## Common Rationalizations
 
 | Rationalization | Reality |

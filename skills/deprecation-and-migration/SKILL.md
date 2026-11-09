@@ -64,7 +64,7 @@ Before deprecating anything, answer these questions:
 
 **Default to advisory.** Use compulsory only when the maintenance cost or risk justifies forcing migration. Compulsory deprecation requires providing migration tooling, documentation, and support — you can't just announce a deadline.
 
-## The Migration Process
+## Process
 
 ### Step 1: Build the Replacement
 

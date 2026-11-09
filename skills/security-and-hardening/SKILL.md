@@ -316,6 +316,14 @@ git diff --cached | grep -i "password\|secret\|api_key\|token"
 
 For detailed security checklists and pre-commit verification steps, see `references/security-checklist.md`.
 
+## Process
+
+1. **Classify the change** against the three tiers: Always Do, Ask First, Never Do.
+2. **Validate and encode external input** at the boundary, and parameterize every query.
+3. **Check secrets and logs.** Nothing sensitive is committed or logged.
+4. **Get human approval** for anything in the Ask First tier before implementing it.
+5. **Run the Security Review Checklist** and `npm audit` (or equivalent) before release.
+
 ## Common Rationalizations
 
 | Rationalization | Reality |

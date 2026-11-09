@@ -35,7 +35,7 @@ Apply this skill when:
 
 This skill needs a live, responsive user. **Do not invoke in non-interactive contexts** like CI pipelines, scheduled runs, `/loop`, or autonomous-loop. If you're in one of those and the ask is underspecified, flag that as a blocker for the user instead of guessing.
 
-## The Process
+## Process
 
 ### Step 1: Hypothesize, with a confidence number
 
