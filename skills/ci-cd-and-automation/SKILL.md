@@ -21,7 +21,7 @@ Automate quality gates so that no change reaches production without passing test
 - When a change should trigger automated verification
 - Debugging CI failures
 
-## The Quality Gate Pipeline
+## Process: The Quality Gate Pipeline
 
 Every change goes through these gates before merge:
 

@@ -19,7 +19,7 @@ Write a structured specification before writing any code. The spec is the shared
 
 **When NOT to use:** Single-line fixes, typo corrections, or changes where requirements are unambiguous and self-contained.
 
-## The Gated Workflow
+## Process: The Gated Workflow
 
 Spec-driven development has four phases. Do not advance to the next phase until the current one is validated.
 

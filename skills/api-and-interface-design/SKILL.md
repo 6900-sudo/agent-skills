@@ -259,6 +259,14 @@ type UserId = string & { readonly __brand: 'UserId' };
 function getTask(id: TaskId): Promise<Task> { ... }
 ```
 
+## Process
+
+1. **Write the contract first.** Define the types, endpoints, and error cases before any implementation (Principle 1).
+2. **Validate at the boundary.** Check inputs where they enter the system and return consistent errors (Principles 2 and 3).
+3. **Prefer additions to changes.** Treat every observable behavior as a commitment, since Hyrum's Law applies (Principle 4).
+4. **Name things predictably.** Keep resource and field names consistent across the whole surface (Principle 5).
+5. **Plan deprecation before removal.** Use `deprecation-and-migration` for anything consumers depend on.
+
 ## Common Rationalizations
 
 | Rationalization | Reality |

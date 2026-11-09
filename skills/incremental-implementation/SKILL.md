@@ -18,7 +18,7 @@ Build in thin vertical slices — implement one piece, test it, verify it, then 
 
 **When NOT to use:** Single-file, single-function changes where the scope is already minimal.
 
-## The Increment Cycle
+## Process: The Increment Cycle
 
 ```
 ┌──────────────────────────────────────┐

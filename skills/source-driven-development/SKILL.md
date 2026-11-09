@@ -24,7 +24,7 @@ Every framework-specific code decision must be backed by official documentation.
 - Pure logic that works the same across all versions (loops, conditionals, data structures)
 - The user explicitly wants speed over verification ("just do it quickly")
 
-## The Process
+## Process
 
 ```
 DETECT ──→ FETCH ──→ IMPLEMENT ──→ CITE

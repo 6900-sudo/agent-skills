@@ -19,7 +19,7 @@ Decompose work into small, verifiable tasks with explicit acceptance criteria. G
 
 **When NOT to use:** Single-file changes with obvious scope, or when the spec already contains well-defined tasks.
 
-## The Planning Process
+## Process
 
 ### Step 1: Enter Plan Mode
 

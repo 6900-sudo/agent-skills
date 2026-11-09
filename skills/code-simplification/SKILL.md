@@ -102,7 +102,7 @@ Simplification has a failure mode: over-simplification. Watch for these traps:
 
 Default to simplifying recently modified code. Avoid drive-by refactors of unrelated code unless explicitly asked to broaden scope. Unscoped simplification creates noise in diffs and risks unintended regressions.
 
-## The Simplification Process
+## Process
 
 ### Step 1: Understand Before Touching (Chesterton's Fence)
 
