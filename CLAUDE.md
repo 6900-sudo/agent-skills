@@ -41,3 +41,7 @@ docs/         → Setup guides for different tools
 - Always: Follow the skill-anatomy.md format for new skills
 - Never: Add skills that are vague advice instead of actionable processes
 - Never: Duplicate content between skills — reference other skills instead
+
+## Delegation
+
+- Delegate every simple task to a subagent (`search`, `builder`, `test-runner`), and review each diff yourself before a task is marked done.
