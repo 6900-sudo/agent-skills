@@ -1,0 +1,6 @@
+# CodeQL policy for .github/workflows/codeql.yml.
+#
+# Uses CodeQL's standard security query suite (the same one default setup
+# runs). No extra query packs and no path filters; add `paths-ignore` here if
+# third-party code is ever vendored into the repo.
+name: CodeQL config
